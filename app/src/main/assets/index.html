@@ -56,7 +56,10 @@ function addJob(){
  Android.createJob(customer,title,qty);document.getElementById('customer').value='';document.getElementById('title').value='';refresh();
 }
 function advance(id){Android.advanceJob(id);refresh();}
-function reject(id){if(confirm('Customer menolak artwork? Pekerjaan dikembalikan untuk revisi.')){Android.rejectApproval(id);refresh();}}
+function reject(id){
+  Android.rejectApproval(id);
+  refresh();
+}
 function resubmit(id){Android.resubmitApproval(id);refresh();}
 refresh();
 </script></body></html>
